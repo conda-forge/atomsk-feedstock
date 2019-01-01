@@ -1,0 +1,13 @@
+diff --git a/src/Makefile b/src/Makefile
+index 6cee349..3e85d5b 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -47,7 +47,7 @@ endif
+ ifndef FORTRAN
+   # GNU Fortran as the default Fortran compiler
+   # NOTE: use gfortran version 4.4 or greater. Versions prior to gfortran 4.4 may cause problems
+-  FORTRAN=gfortran
++  FORTRAN=${FC}
+ 
+   # -O2 gives good optimization/performance
+   # -fno-backslash prevents backslash characters to be misunderstood
