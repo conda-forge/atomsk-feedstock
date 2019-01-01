@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/pierrehirel/{{ name }}/archive/Beta-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - make.patch
 
 build:
   number: 1000
