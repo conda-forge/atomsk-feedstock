@@ -23,8 +23,7 @@ requirements:
     - make 
   host:
     - libblas
-    - libcblas
-  run:
+    - liblapack
 
 test:
   commands: 
