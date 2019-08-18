@@ -2,4 +2,4 @@
 export LAPACK=${PREFIX}/lib/liblapack${SHLIB_EXT}
 cd src
 make atomsk
-cp atomsk ${PATH}/atomsk
+cp atomsk ${PATH}
