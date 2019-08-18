@@ -4,4 +4,4 @@ cd src
 make atomsk
 ls -al
 mkdir -p ${PATH}
-cp atomsk ${PATH}
+cp atomsk ${PATH}/atomsk
