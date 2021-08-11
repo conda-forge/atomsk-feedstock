@@ -1,13 +1,40 @@
+From 33b96adc20043de5c7d5b412c3cf7c2ba6404c64 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Wed, 11 Aug 2021 08:31:30 -0600
+Subject: [PATCH] Update Makefile
+
+---
+ src/Makefile | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
 diff --git a/src/Makefile b/src/Makefile
-index 6cee349..3e85d5b 100644
+index 8701cf1..77ea60b 100644
 --- a/src/Makefile
 +++ b/src/Makefile
-@@ -47,7 +47,7 @@ endif
+@@ -49,7 +49,7 @@ endif
  ifndef FORTRAN
    # GNU Fortran as the default Fortran compiler
    # NOTE: use gfortran version 4.4 or greater. Versions prior to gfortran 4.4 may cause problems
 -  FORTRAN=gfortran
-+  FORTRAN=${FC}
- 
-   # -O2 gives good optimization/performance
++  FORTRAN=$(FC)
+   
+   # Comment the following line to disable parallelization with OpenMP
+   OPENMP=-DOPENMP -fopenmp
+@@ -58,7 +58,7 @@ ifndef FORTRAN
    # -fno-backslash prevents backslash characters to be misunderstood
+   # -I is used to specify folders where the compiler should look for *.mod files
+   # -J is used to specify the folder where the compiler will store the *.mod files
+-  FFLAGS=-O2 $(OPENMP) -fno-backslash -I..$(SEP)$(OBJ) -J..$(SEP)$(OBJ)
++  FFLAGS=$(FFLAGS) -O2 $(OPENMP) -fno-backslash -I..$(SEP)$(OBJ) -J..$(SEP)$(OBJ)
+   
+   # Un-comment the following line to use 8-bits integers by default
+   # (number of atoms up to 9x10^18 instead of 2x10^9)
+@@ -78,7 +78,7 @@ endif
+ # (for UNIX/Linux systems only)
+ # (do NOT insert a / at the end of the paths)
+ ifndef INSTPATH
+-  INSTPATH=/usr/local
++  INSTPATH=$(PREFIX)
+ endif
+ # BINPATH: the binary will be copied there
+ ifndef BINPATH
