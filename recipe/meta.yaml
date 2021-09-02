@@ -7,13 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://atomsk.univ-lille.fr/code/atomsk_b{{ version }}.tar.gz
+  url: https://github.com/pierrehirel/{{ name }}/archive/Beta-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - make.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux]
 
 requirements:
