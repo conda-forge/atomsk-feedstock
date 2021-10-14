@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/pierrehirel/{{ name }}/archive/refs/tags/Beta-{{ version }}.tar.gz
+  url: https://github.com/pierrehirel/{{ name }}/archive/Beta-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - make.patch
