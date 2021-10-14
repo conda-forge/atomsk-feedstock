@@ -1,13 +1,13 @@
 {% set name = "atomsk" %}
-{% set version = "0.11" %}
-{% set sha256 = "cc248af89ebd32d117caed2490b5fface1fa894652875f2a36a398aa0904cc76" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "ffaca24f371ba228cbf1e37cebd4e8de34660f44c1a54894bfb2eeb05e30f598" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/pierrehirel/{{ name }}/archive/Beta-{{ version }}.tar.gz
+  url: https://github.com/pierrehirel/{{ name }}/archive/refs/tags/Beta-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - make.patch
