@@ -1,6 +1,6 @@
 {% set name = "atomsk" %}
-{% set version = "0.11" %}
-{% set sha256 = "cc248af89ebd32d117caed2490b5fface1fa894652875f2a36a398aa0904cc76" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "d76664c179b148ff99e5858605b2e30083df5df67d5e315ac645229d6613f5b9" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
     - make.patch
 
 build:
-  number: 1
+  number: 0
   skip: True  # [not linux]
 
 requirements:
