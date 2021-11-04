@@ -1,6 +1,6 @@
 {% set name = "atomsk" %}
-{% set version = "0.11.1" %}
-{% set sha256 = "d76664c179b148ff99e5858605b2e30083df5df67d5e315ac645229d6613f5b9" %}
+{% set version = "0.11.2" %}
+{% set sha256 = "0a5ff01b27df7e9b7127f47816e1c29f15dff01f3241a56f8d755a019d988960" %}
 
 package:
   name: {{ name|lower }}
@@ -14,27 +14,27 @@ source:
 
 build:
   number: 0
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
-    - make 
+    - make
   host:
     - libblas
     - liblapack
 
 test:
-  commands: 
+  commands:
     - atomsk --create fcc 4.02 Al aluminium.xsf
 
 about:
   home: http://atomsk.univ-lille1.fr
   license: GPL-3.0
   license_family: GPL
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
-  summary: 'The Swiss-army knife of atomic simulations'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
+  summary: The Swiss-army knife of atomic simulations
 
   description: |
     Atomsk is an Open Source command-line program dedicated to 
