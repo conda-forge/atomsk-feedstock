@@ -1,6 +1,6 @@
 {% set name = "atomsk" %}
-{% set version = "0.12.1" %}
-{% set sha256 = "dcc6369e247e3d3d5a2abd044e6c4b82fdbfc8328ec758fb3a265ea2e8c37714" %}
+{% set version = "0.13.1" %}
+{% set sha256 = "8a4d40e16ee88268f3d498f854ec242b932f7f6b0f4b0c1a2b4e7b4e1b02b580" %}
 
 package:
   name: {{ name|lower }}
