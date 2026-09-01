@@ -3,19 +3,18 @@ About atomsk-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atomsk-feedstock/blob/main/LICENSE.txt)
 
-Home: http://atomsk.univ-lille1.fr
+Home: http://atomsk.univ-lille1.fr/
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Summary: The Swiss-army knife of atomic simulations
 
 Development: https://github.com/pierrehirel/atomsk/
 
-Documentation: http://atomsk.univ-lille1.fr
+Documentation: http://atomsk.univ-lille1.fr/
 
 Atomsk is an Open Source command-line program dedicated to
 the creation, manipulation, and conversion of atomic systems.
-
 
 Current build status
 ====================

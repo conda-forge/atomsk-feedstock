@@ -1,0 +1,49 @@
+schema_version: 1
+
+context:
+  name: atomsk
+  version: "0.13.1"
+  sha256: 8a4d40e16ee88268f3d498f854ec242b932f7f6b0f4b0c1a2b4e7b4e1b02b580
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/pierrehirel/${{ name }}/archive/Beta-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+  patches:
+    - make.patch
+
+build:
+  number: 2
+  skip: not linux
+
+requirements:
+  build:
+    - ${{ compiler('fortran') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - make
+  host:
+    - libblas
+    - liblapack
+
+tests:
+  - script:
+      - atomsk --create fcc 4.02 Al aluminium.xsf
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE.txt
+  summary: The Swiss-army knife of atomic simulations
+  description: |
+    Atomsk is an Open Source command-line program dedicated to
+    the creation, manipulation, and conversion of atomic systems.
+  homepage: http://atomsk.univ-lille1.fr
+  repository: https://github.com/pierrehirel/atomsk/
+  documentation: http://atomsk.univ-lille1.fr
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
